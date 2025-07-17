@@ -40,7 +40,7 @@ def mostrar_pregunta():
     if "imagen" in reactivo and os.path.exists(reactivo["imagen"]):
         try:
             imagen = Image.open(reactivo["imagen"])
-            st.image(imagen, caption="Tabla de datos", use_column_width=True)
+           st.image(imagen, caption="Tabla de datos", use_container_width=True)
         except Exception as e:
             st.warning(f"No se pudo cargar la imagen: {reactivo['imagen']}")
     else:
